@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esercizio3</title>
+</head>
+<body>
+    <div>
+        <h4>
+        Scrivere un programma ContaNumeriCrescenti che chiede all’utente di inserire una sequenza di numeri interi
+        crescenti (man mano sempre pi`u grandi) e ne stampa la lunghezza (il numero
+        di valori inseriti dall’utente). Il programma termina non appena
+        l’utente inserisce un valore minore o
+        uguale al precedente. 
+        </h4>
+    </div>
+    <script>
+    function contaNumeriCrescenti() {
+        var numeroPrecedente = -1; 
+        var lunghezzaSequenza = 0; 
+
+        while (true) {
+            var numero = parseInt(prompt("Ciao!\nInserisci un numero intero crescente (inserisci un valore minore o uguale per terminare):"));
+            if (numero <= numeroPrecedente || isNaN(numero)) {
+                break;
+            } else {
+                numeroPrecedente = numero; 
+                lunghezzaSequenza++; 
+            }
+        }
+        console.log("Hai inserito " + lunghezzaSequenza + " numeri crescenti.");
+    }
+
+    contaNumeriCrescenti();
+    </script>
+</body>
+</html>
